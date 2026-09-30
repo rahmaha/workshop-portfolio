@@ -89,7 +89,7 @@
     <!-- TOP NAVIGATION NAVBAR -->
     <header class="sticky top-0 z-40 bg-paper-bg/90 backdrop-blur-md border-b-2 border-paper-dark py-3 px-4 md:px-8">
         <div class="max-w-6xl mx-auto flex items-center justify-between">
-            
+
             <!-- Brand / Speaker Badge -->
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-terracotta paper-border flex items-center justify-center font-heading font-bold text-white text-lg paper-shadow-sm">
@@ -126,7 +126,7 @@
     <!-- HERO SECTION -->
     <section class="max-w-6xl mx-auto px-4 md:px-8 pt-8 pb-6 w-full">
         <div class="bg-paper-card rounded-2xl paper-border paper-shadow-lg p-6 md:p-10 relative overflow-hidden">
-            
+
             <!-- Speaker & Event Badge -->
             <div class="inline-flex items-center gap-2 bg-paper-beige border border-paper-dark px-3 py-1 rounded-full text-xs font-bold font-heading mb-4 text-paper-dark">
                 <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
@@ -136,7 +136,7 @@
             <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-paper-dark leading-tight max-w-3xl">
                 Panduan Praktis Edit Template Canva & Kumpul Karya
             </h2>
-            
+
             <p class="text-sm md:text-base text-paper-dark/80 mt-3 max-w-2xl leading-relaxed">
                 Halaman ini berisi ringkasan materi demo, akses langsung ke template Canva latihan, dan formulir untuk mengumpulkan hasil karya kamu selama sesi workshop.
             </p>
@@ -158,7 +158,7 @@
     <!-- SECTION 1: MATERI & PANDUAN DEMO (PENGGANTI PPT) -->
     <section id="materi" class="max-w-6xl mx-auto px-4 md:px-8 py-8 w-full">
         <div class="bg-paper-beige/60 rounded-2xl paper-border p-6 md:p-8">
-            
+
             <div class="mb-6">
                 <span class="px-3 py-1 bg-paper-dark text-white text-[11px] font-bold font-heading rounded-full uppercase tracking-wider">
                     Panduan Live Demo
@@ -173,7 +173,7 @@
 
             <!-- Demo Steps Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                
+
                 <!-- Step 1 -->
                 <div class="bg-paper-card p-5 rounded-xl paper-border paper-shadow-sm relative">
                     <span class="absolute -top-3 -right-3 w-8 h-8 bg-terracotta text-white rounded-full paper-border flex items-center justify-center font-heading font-bold text-sm">
@@ -250,7 +250,7 @@
 
     <!-- SECTION 2: TEMPLATE SHOWCASE -->
     <section id="templates" class="max-w-6xl mx-auto px-4 md:px-8 py-8 w-full">
-        
+
         <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 pb-4 border-b-2 border-paper-dark/20">
             <div>
@@ -267,38 +267,28 @@
                 <button onclick="filterCategory('all')" class="cat-btn active px-4 py-1.5 bg-paper-dark text-white text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
                     Semua
                 </button>
-                <button onclick="filterCategory('Presentation')" class="cat-btn px-4 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
-                    Presentation
-                </button>
-                <button onclick="filterCategory('Social Media')" class="cat-btn px-4 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
-                    Social Media
-                </button>
-                <button onclick="filterCategory('Poster')" class="cat-btn px-4 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
-                    Poster
-                </button>
             </div>
         </div>
 
         <!-- Template Cards Grid -->
-        <div id="template-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Cards generated dynamically via JavaScript -->
+        <div id="template-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         </div>
 
     </section>
 
     <!-- SECTION 3: KUMPUL KARYA (TALLY.SO FORM EMBED) -->
     <section id="kumpul-karya" class="max-w-6xl mx-auto px-4 md:px-8 py-10 w-full">
-        
+
         <div class="bg-paper-card rounded-2xl paper-border paper-shadow-lg overflow-hidden">
-            
+
             <!-- Section Title Header -->
             <div class="bg-paper-beige p-6 md:p-8 border-b-2 border-paper-dark flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <span class="px-3 py-1 bg-terracotta text-white text-[11px] font-bold font-heading rounded-full uppercase tracking-wider">
-                        Submit Assignment
+                        Hasil Karya
                     </span>
                     <h3 class="font-heading font-bold text-2xl md:text-3xl text-paper-dark mt-2">
-                        📤 Kumpul Karya Workshop
+                        📤 Kumpulkan E-Portofolio Kamu!
                     </h3>
                     <p class="text-sm text-paper-dark/80 mt-1">
                         Isi formulir di bawah ini untuk mengumpulkan hasil latihan Canva milikmu.
@@ -311,88 +301,36 @@
                         <i class="fa-solid fa-circle-info text-terracotta"></i> Yang Perlu Disiapkan:
                     </div>
                     <p class="text-paper-dark/70 text-[11px]">
-                        Nama Lengkap, Email, dan Link Canva (Public View Link) atau File Foto/PNG hasil karya.
+                        Nama Lengkap, Kelas, Email, dan Link Canva (Public View Link).
                     </p>
                 </div>
             </div>
 
-            <!-- EMBEDDED FORM CONTAINER (TALLY.SO / GOOGLE FORM) -->
+            <!-- EMBEDDED FORM CONTAINER (TALLY.SO DIRECT) -->
             <div class="p-4 md:p-6 bg-paper-bg">
-                <div class="w-full bg-white rounded-xl paper-border overflow-hidden relative min-h-[500px]">
-                    
-                    <!-- 
-                    ===================================================================
-                    [CARA MEMASANG TALLY.SO / GOOGLE FORM]
-                    1. Buka Tally.so atau Google Form kamu.
-                    2. Ambil Link Form / Embed Code.
-                    3. Ganti URL 'src' pada iframe di bawah ini dengan URL form kamu!
-                       Contoh Tally: src="https://tally.so/embed/wL9XYZ?hideTitle=1"
-                    ===================================================================
-                    -->
-                    <iframe 
-                        id="form-iframe"
-                        data-tally-src="https://tally.so/embed/wL9XYZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                        src="https://tally.so/embed/wL9XYZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                <div class="w-full bg-white rounded-xl paper-border overflow-hidden p-2 md:p-4 min-h-[300px]">
+
+                    <!-- Tally iFrame Direct -->
+                    <iframe
+                        data-tally-src="https://tally.so/embed/RGE82v?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                        src="https://tally.so/embed/RGE82v?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                         loading="lazy"
-                        width="100%" 
-                        height="500" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        title="Form Kumpul Karya">
+                        width="100%"
+                        height="279"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Kumpulkan E-Portofolio Kamu!">
                     </iframe>
 
-                    <!-- Placeholder Notice (Ditampilkan jika link Tally belum diganti) -->
-                    <div id="form-placeholder-notice" class="absolute inset-0 bg-paper-card/95 backdrop-blur-sm p-6 md:p-10 flex flex-col items-center justify-center text-center z-10">
-                        <div class="w-16 h-16 bg-paper-beige rounded-2xl paper-border flex items-center justify-center mb-4 text-3xl paper-shadow-sm">
-                            📝
-                        </div>
-                        <h4 class="font-heading font-bold text-xl text-paper-dark">Formulir Tally.so Siap Dihubungkan!</h4>
-                        <p class="text-xs md:text-sm text-paper-dark/70 max-w-md mt-2 leading-relaxed">
-                            Formulir ini siap menampilkan form dari <strong>Tally.so</strong> atau <strong>Google Form</strong>. Buka file HTML ini, lalu cari komentar <code>[CARA MEMASANG TALLY.SO]</code> untuk memasukkan URL formulir milikmu.
-                        </p>
-                        
-                        <button onclick="hidePlaceholderNotice()" class="mt-5 px-5 py-2.5 bg-terracotta text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm hover:bg-terracotta-dark transition-all">
-                            Tampilkan Demo Formulir Sederhana
-                        </button>
-                    </div>
-
-                    <!-- Direct Form Demo (Fallback) -->
-                    <div id="demo-direct-form" class="hidden p-6 md:p-8 bg-paper-card min-h-[450px]">
-                        <form onsubmit="handleDemoSubmit(event)" class="max-w-xl mx-auto space-y-4">
-                            <div class="bg-paper-beige p-3 rounded-lg border border-paper-dark text-xs text-paper-dark font-medium flex items-center gap-2">
-                                <i class="fa-solid fa-lightbulb text-terracotta text-sm"></i>
-                                Ini adalah tampilan contoh formulir kumpul karya peserta.
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold font-heading uppercase mb-1">Nama Lengkap Peserta</label>
-                                <input type="text" required placeholder="Contoh: Amanda Putri" class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold font-heading uppercase mb-1">Email / Kontak Whatsapp</label>
-                                <input type="text" required placeholder="Contoh: amanda@gmail.com" class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold font-heading uppercase mb-1">Link Hasil Karya Canva</label>
-                                <input type="url" required placeholder="https://www.canva.com/design/..." class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold font-heading uppercase mb-1">Pesan / Kesan Workshop (Opsional)</label>
-                                <textarea rows="3" placeholder="Apa bagian favoritmu dari workshop hari ini?" class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none"></textarea>
-                            </div>
-
-                            <button type="submit" id="submit-demo-btn" class="w-full py-3 bg-terracotta text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm hover:bg-terracotta-dark transition-all">
-                                Kirimkan Hasil Karya
-                            </button>
-                        </form>
-                    </div>
+                    <!-- Tally Embed Script -->
+                    <script>
+                        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+                    </script>
 
                 </div>
             </div>
+
         </div>
 
     </section>
@@ -421,7 +359,7 @@
     <!-- INTERACTIVE PREVIEW MODAL -->
     <div id="preview-modal" class="fixed inset-0 bg-paper-dark/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-paper-card paper-border paper-shadow-lg rounded-2xl w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]">
-            
+
             <!-- Modal Header -->
             <div class="bg-paper-beige px-6 py-4 border-b-2 border-paper-dark flex items-center justify-between">
                 <div class="flex items-center gap-2">
@@ -480,61 +418,45 @@
     </div>
 
     <script>
-        /* 
+        /*
         ===================================================================
-        [EDIT DAFTAR TEMPLATE CANVA KAMU DI SINI]
+        [EDIT DAFTAR TEMPLATE KAMU DI SINI]
         Ganti nilai 'canvaUrl' di bawah ini dengan link Canva milikmu jika sudah siap!
         ===================================================================
         */
         const templatesData = [
             {
                 id: 1,
-                title: "Slide Deck Presentation Pitch",
-                category: "Presentation",
-                image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=600&q=80",
-                description: "Template slide presentasi 12 halaman bergaya minimalis dan elegan untuk keperluan pitch deck atau materi seminar.",
-                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+                title: "Template Portofolio Grid Style",
+                category: "Web Design",
+                image: "./image/template-01.jpeg",
+                description: "Template portofolio pribadi bergaya editorial minimalis dengan sentuhan grid teknis.",
+                canvaUrl: "https://canva.link/tn3lnsln5tcqfmt" // <-- GANTI LINK CANVA DI SINI
             },
             {
                 id: 2,
-                title: "Instagram Aesthetic Carousel",
-                category: "Social Media",
-                image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
-                description: "Template 5-slide carousel Instagram berformat grid berlanjut dengan tone warna earthy warm.",
-                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+                title: "Template Portofolio Modern Clean",
+                category: "Web Design",
+                image: "./image/template-02.png",
+                description: "Template portofolio pribadi bergaya clean dan minimalis dengan aksen bingkai serta sentuhan font tulisan tangan.",
+                canvaUrl: "https://canva.link/b0rq0lyjy5zr2fq" // <-- GANTI LINK CANVA DI SINI
             },
             {
                 id: 3,
-                title: "Aesthetic Event Poster A4",
-                category: "Poster",
-                image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
-                description: "Layout poster pameran atau event bertema vintage & tipografi cetak elegan.",
-                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+                title: "Template Portofolio Aesthetic Paper",
+                category: "Web Design",
+                image: "./image/template-03.png",
+                description: "Template portofolio pribadi bergaya scrapbook dan paper texture dengan aksen doodle yang kreatif.",
+                canvaUrl: "https://canva.link/9ugtsqjlv2047xl" // <-- GANTI LINK CANVA DI SINI
             },
             {
                 id: 4,
-                title: "Brand Moodboard & Colors",
-                category: "Presentation",
-                image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80",
-                description: "Kombinasi kolase foto dan palet warna untuk mempresentasikan identitas visual sebuah brand.",
-                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+                title: "Template Portofolio Dark Modern",
+                category: "Web Design",
+                image: "./image/template-04.png",
+                description: "Template portofolio pribadi bergaya dark mode dengan efek typography menyala yang sinematik.",
+                canvaUrl: "https://canva.link/agzspqhxgy6e6pd" // <-- GANTI LINK CANVA DI SINI
             },
-            {
-                id: 5,
-                title: "Editorial Header Banner",
-                category: "Social Media",
-                image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80",
-                description: "Banner header serbaguna bergaya majalah cetak modern untuk promosi produk atau konten edukasi.",
-                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
-            },
-            {
-                id: 6,
-                title: "Minimalist Workshop Flyer",
-                category: "Poster",
-                image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80",
-                description: "Flyer promosi workshop ukuran A4 dengan kontras tinggi yang mudah dibaca oleh target audiens.",
-                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
-            }
         ];
 
         let activeCategory = 'all';
@@ -548,8 +470,8 @@
             const grid = document.getElementById('template-grid');
             grid.innerHTML = '';
 
-            const filtered = activeCategory === 'all' 
-                ? templatesData 
+            const filtered = activeCategory === 'all'
+                ? templatesData
                 : templatesData.filter(t => t.category.toLowerCase() === activeCategory.toLowerCase());
 
             filtered.forEach(item => {
@@ -615,7 +537,7 @@
             document.getElementById('modal-category').innerText = item.category;
             document.getElementById('modal-desc').innerText = item.description;
             document.getElementById('modal-canva-btn').href = item.canvaUrl;
-            
+
             currentActiveModalUrl = item.canvaUrl;
             document.getElementById('preview-modal').classList.remove('hidden');
         }
@@ -626,7 +548,7 @@
 
         function copyModalLink() {
             if (!currentActiveModalUrl) return;
-            
+
             const dummyInput = document.createElement('input');
             document.body.appendChild(dummyInput);
             dummyInput.value = currentActiveModalUrl;
@@ -656,7 +578,7 @@
             e.preventDefault();
             const btn = document.getElementById('submit-demo-btn');
             btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Mengirim...`;
-            
+
             setTimeout(() => {
                 btn.innerHTML = `<i class="fa-solid fa-check-circle"></i> Hasil Karya Terkirim!`;
                 btn.classList.remove('bg-terracotta');
