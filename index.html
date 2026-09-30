@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva Workshop Hub & Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tally Embed Script -->
+    <script src="https://tally.so/widgets/embed.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'paper-bg': '#F7F4EE',         /* Warm Aesthetic Paper Background */
+                        'paper-card': '#FFFFFF',       /* Card Sheet White */
+                        'paper-beige': '#EAE3D2',      /* Soft Beige Highlight */
+                        'paper-dark': '#2B2A29',       /* Dark Charcoal Text */
+                        'terracotta': '#C86D51',       /* Warm Terracotta Accent */
+                        'terracotta-dark': '#B0593E',  /* Hover Terracotta */
+                        'sage-soft': '#A4B09D',        /* Soft Muted Sage */
+                    },
+                    fontFamily: {
+                        'heading': ['Space Grotesk', 'sans-serif'],
+                        'body': ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F7F4EE;
+            background-image: radial-gradient(#2B2A29 0.4px, transparent 0.4px);
+            background-size: 20px 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2B2A29;
+        }
+
+        .paper-border {
+            border: 2px solid #2B2A29;
+        }
+
+        .paper-shadow {
+            box-shadow: 4px 5px 0px 0px #2B2A29;
+        }
+
+        .paper-shadow-lg {
+            box-shadow: 6px 8px 0px 0px #2B2A29;
+        }
+
+        .paper-shadow-sm {
+            box-shadow: 2px 3px 0px 0px #2B2A29;
+        }
+
+        .paper-shadow-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .paper-shadow-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 8px 0px 0px #2B2A29;
+        }
+
+        /* Toast animation */
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-up {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- TOP NAVIGATION NAVBAR -->
+    <header class="sticky top-0 z-40 bg-paper-bg/90 backdrop-blur-md border-b-2 border-paper-dark py-3 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            
+            <!-- Brand / Speaker Badge -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-terracotta paper-border flex items-center justify-center font-heading font-bold text-white text-lg paper-shadow-sm">
+                    ✨
+                </div>
+                <div>
+                    <h1 class="font-heading font-bold text-base md:text-lg leading-tight text-paper-dark">
+                        CANVA DEMO HUB
+                    </h1>
+                    <p class="text-[11px] text-paper-dark/70 font-medium">
+                        Materi, Template & Kumpul Karya
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Navigation Anchors -->
+            <nav class="flex items-center gap-2 md:gap-3">
+                <a href="#materi" class="px-3 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm transition-all hidden sm:flex items-center gap-1.5">
+                    <i class="fa-solid fa-book-open text-terracotta"></i>
+                    Materi
+                </a>
+                <a href="#templates" class="px-3.5 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-layer-group text-terracotta"></i>
+                    Template
+                </a>
+                <a href="#kumpul-karya" class="px-3.5 py-1.5 bg-terracotta hover:bg-terracotta-dark text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Kumpul Karya
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="max-w-6xl mx-auto px-4 md:px-8 pt-8 pb-6 w-full">
+        <div class="bg-paper-card rounded-2xl paper-border paper-shadow-lg p-6 md:p-10 relative overflow-hidden">
+            
+            <!-- Speaker & Event Badge -->
+            <div class="inline-flex items-center gap-2 bg-paper-beige border border-paper-dark px-3 py-1 rounded-full text-xs font-bold font-heading mb-4 text-paper-dark">
+                <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+                LIVE WORKSHOP & DEMO SESSION
+            </div>
+
+            <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-paper-dark leading-tight max-w-3xl">
+                Panduan Praktis Edit Template Canva & Kumpul Karya
+            </h2>
+            
+            <p class="text-sm md:text-base text-paper-dark/80 mt-3 max-w-2xl leading-relaxed">
+                Halaman ini berisi ringkasan materi demo, akses langsung ke template Canva latihan, dan formulir untuk mengumpulkan hasil karya kamu selama sesi workshop.
+            </p>
+
+            <!-- Quick Action Buttons -->
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+                <a href="#materi" class="px-6 py-3 bg-paper-dark text-white font-heading font-bold text-xs md:text-sm uppercase tracking-wider rounded-xl paper-shadow-sm hover:bg-black transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-circle-play text-terracotta"></i>
+                    Lihat Langkah Demo
+                </a>
+                <a href="#templates" class="px-6 py-3 bg-terracotta text-white font-heading font-bold text-xs md:text-sm uppercase tracking-wider rounded-xl paper-border paper-shadow-sm hover:bg-terracotta-dark transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Ambil Template Canva
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: MATERI & PANDUAN DEMO (PENGGANTI PPT) -->
+    <section id="materi" class="max-w-6xl mx-auto px-4 md:px-8 py-8 w-full">
+        <div class="bg-paper-beige/60 rounded-2xl paper-border p-6 md:p-8">
+            
+            <div class="mb-6">
+                <span class="px-3 py-1 bg-paper-dark text-white text-[11px] font-bold font-heading rounded-full uppercase tracking-wider">
+                    Panduan Live Demo
+                </span>
+                <h3 class="font-heading font-bold text-2xl md:text-3xl text-paper-dark mt-2">
+                    📖 Langkah-Langkah Mengedit Template di Canva
+                </h3>
+                <p class="text-xs md:text-sm text-paper-dark/70 mt-1">
+                    Ikuti 5 langkah simpel berikut saat kamu mempraktikkan desain di Canva:
+                </p>
+            </div>
+
+            <!-- Demo Steps Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <!-- Step 1 -->
+                <div class="bg-paper-card p-5 rounded-xl paper-border paper-shadow-sm relative">
+                    <span class="absolute -top-3 -right-3 w-8 h-8 bg-terracotta text-white rounded-full paper-border flex items-center justify-center font-heading font-bold text-sm">
+                        01
+                    </span>
+                    <div class="w-10 h-10 rounded-lg bg-paper-beige paper-border flex items-center justify-center text-terracotta text-lg mb-3">
+                        <i class="fa-solid fa-arrow-pointer"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-base text-paper-dark">Buka & Duplikasi</h4>
+                    <p class="text-xs text-paper-dark/75 mt-1.5 leading-relaxed">
+                        Klik tombol <strong>"Gunakan Template"</strong> di bagian bawah. Canva akan otomatis membuatkan salinan baru di akun milikmu.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-paper-card p-5 rounded-xl paper-border paper-shadow-sm relative">
+                    <span class="absolute -top-3 -right-3 w-8 h-8 bg-terracotta text-white rounded-full paper-border flex items-center justify-center font-heading font-bold text-sm">
+                        02
+                    </span>
+                    <div class="w-10 h-10 rounded-lg bg-paper-beige paper-border flex items-center justify-center text-terracotta text-lg mb-3">
+                        <i class="fa-solid fa-font"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-base text-paper-dark">Edit Teks & Tipografi</h4>
+                    <p class="text-xs text-paper-dark/75 mt-1.5 leading-relaxed">
+                        Klik 2x pada teks untuk mengubah isi tulisan. Sesuaikan ukuran font dan hirarki judul agar teks utama mudah dibaca.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-paper-card p-5 rounded-xl paper-border paper-shadow-sm relative">
+                    <span class="absolute -top-3 -right-3 w-8 h-8 bg-terracotta text-white rounded-full paper-border flex items-center justify-center font-heading font-bold text-sm">
+                        03
+                    </span>
+                    <div class="w-10 h-10 rounded-lg bg-paper-beige paper-border flex items-center justify-center text-terracotta text-lg mb-3">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-base text-paper-dark">Ubah Palet Warna</h4>
+                    <p class="text-xs text-paper-dark/75 mt-1.5 leading-relaxed">
+                        Gunakan menu <strong>Color Palette</strong> untuk mengganti warna background atau elemen sesuai gaya/brand kamu.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-paper-card p-5 rounded-xl paper-border paper-shadow-sm relative">
+                    <span class="absolute -top-3 -right-3 w-8 h-8 bg-terracotta text-white rounded-full paper-border flex items-center justify-center font-heading font-bold text-sm">
+                        04
+                    </span>
+                    <div class="w-10 h-10 rounded-lg bg-paper-beige paper-border flex items-center justify-center text-terracotta text-lg mb-3">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-base text-paper-dark">Ganti Gambar / Frame</h4>
+                    <p class="text-xs text-paper-dark/75 mt-1.5 leading-relaxed">
+                        Pilih foto dari menu <em>Uploads</em> atau <em>Elements</em>, lalu geser (drag & drop) langsung ke dalam bingkai foto Canva.
+                    </p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-paper-card p-5 rounded-xl paper-border paper-shadow-sm relative sm:col-span-2 lg:col-span-2">
+                    <span class="absolute -top-3 -right-3 w-8 h-8 bg-terracotta text-white rounded-full paper-border flex items-center justify-center font-heading font-bold text-sm">
+                        05
+                    </span>
+                    <div class="w-10 h-10 rounded-lg bg-paper-beige paper-border flex items-center justify-center text-terracotta text-lg mb-3">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-base text-paper-dark">Unduh atau Ambil Link Publik</h4>
+                    <p class="text-xs text-paper-dark/75 mt-1.5 leading-relaxed">
+                        Klik tombol <strong>Bagikan (Share)</strong> di sudut kanan atas Canva $\rightarrow$ pilih <strong>Download (PNG/JPG)</strong> atau ubah izin link menjadi <em>"Anyone with the link can view"</em> lalu salin link-nya untuk dikumpulkan.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TEMPLATE SHOWCASE -->
+    <section id="templates" class="max-w-6xl mx-auto px-4 md:px-8 py-8 w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 pb-4 border-b-2 border-paper-dark/20">
+            <div>
+                <div class="text-xs font-bold font-heading text-terracotta uppercase tracking-widest mb-1">
+                    Practice Assets
+                </div>
+                <h3 class="font-heading font-bold text-2xl md:text-3xl text-paper-dark">
+                    🎨 Template Canva Latihan
+                </h3>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0" id="category-buttons">
+                <button onclick="filterCategory('all')" class="cat-btn active px-4 py-1.5 bg-paper-dark text-white text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
+                    Semua
+                </button>
+                <button onclick="filterCategory('Presentation')" class="cat-btn px-4 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
+                    Presentation
+                </button>
+                <button onclick="filterCategory('Social Media')" class="cat-btn px-4 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
+                    Social Media
+                </button>
+                <button onclick="filterCategory('Poster')" class="cat-btn px-4 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all">
+                    Poster
+                </button>
+            </div>
+        </div>
+
+        <!-- Template Cards Grid -->
+        <div id="template-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards generated dynamically via JavaScript -->
+        </div>
+
+    </section>
+
+    <!-- SECTION 3: KUMPUL KARYA (TALLY.SO FORM EMBED) -->
+    <section id="kumpul-karya" class="max-w-6xl mx-auto px-4 md:px-8 py-10 w-full">
+        
+        <div class="bg-paper-card rounded-2xl paper-border paper-shadow-lg overflow-hidden">
+            
+            <!-- Section Title Header -->
+            <div class="bg-paper-beige p-6 md:p-8 border-b-2 border-paper-dark flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <span class="px-3 py-1 bg-terracotta text-white text-[11px] font-bold font-heading rounded-full uppercase tracking-wider">
+                        Submit Assignment
+                    </span>
+                    <h3 class="font-heading font-bold text-2xl md:text-3xl text-paper-dark mt-2">
+                        📤 Kumpul Karya Workshop
+                    </h3>
+                    <p class="text-sm text-paper-dark/80 mt-1">
+                        Isi formulir di bawah ini untuk mengumpulkan hasil latihan Canva milikmu.
+                    </p>
+                </div>
+
+                <!-- Step Helper Badge -->
+                <div class="bg-paper-card p-3 rounded-xl border border-paper-dark text-xs space-y-1 max-w-sm">
+                    <div class="font-bold font-heading text-paper-dark">
+                        <i class="fa-solid fa-circle-info text-terracotta"></i> Yang Perlu Disiapkan:
+                    </div>
+                    <p class="text-paper-dark/70 text-[11px]">
+                        Nama Lengkap, Email, dan Link Canva (Public View Link) atau File Foto/PNG hasil karya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- EMBEDDED FORM CONTAINER (TALLY.SO / GOOGLE FORM) -->
+            <div class="p-4 md:p-6 bg-paper-bg">
+                <div class="w-full bg-white rounded-xl paper-border overflow-hidden relative min-h-[500px]">
+                    
+                    <!-- 
+                    ===================================================================
+                    [CARA MEMASANG TALLY.SO / GOOGLE FORM]
+                    1. Buka Tally.so atau Google Form kamu.
+                    2. Ambil Link Form / Embed Code.
+                    3. Ganti URL 'src' pada iframe di bawah ini dengan URL form kamu!
+                       Contoh Tally: src="https://tally.so/embed/wL9XYZ?hideTitle=1"
+                    ===================================================================
+                    -->
+                    <iframe 
+                        id="form-iframe"
+                        data-tally-src="https://tally.so/embed/wL9XYZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                        src="https://tally.so/embed/wL9XYZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                        loading="lazy"
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        title="Form Kumpul Karya">
+                    </iframe>
+
+                    <!-- Placeholder Notice (Ditampilkan jika link Tally belum diganti) -->
+                    <div id="form-placeholder-notice" class="absolute inset-0 bg-paper-card/95 backdrop-blur-sm p-6 md:p-10 flex flex-col items-center justify-center text-center z-10">
+                        <div class="w-16 h-16 bg-paper-beige rounded-2xl paper-border flex items-center justify-center mb-4 text-3xl paper-shadow-sm">
+                            📝
+                        </div>
+                        <h4 class="font-heading font-bold text-xl text-paper-dark">Formulir Tally.so Siap Dihubungkan!</h4>
+                        <p class="text-xs md:text-sm text-paper-dark/70 max-w-md mt-2 leading-relaxed">
+                            Formulir ini siap menampilkan form dari <strong>Tally.so</strong> atau <strong>Google Form</strong>. Buka file HTML ini, lalu cari komentar <code>[CARA MEMASANG TALLY.SO]</code> untuk memasukkan URL formulir milikmu.
+                        </p>
+                        
+                        <button onclick="hidePlaceholderNotice()" class="mt-5 px-5 py-2.5 bg-terracotta text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm hover:bg-terracotta-dark transition-all">
+                            Tampilkan Demo Formulir Sederhana
+                        </button>
+                    </div>
+
+                    <!-- Direct Form Demo (Fallback) -->
+                    <div id="demo-direct-form" class="hidden p-6 md:p-8 bg-paper-card min-h-[450px]">
+                        <form onsubmit="handleDemoSubmit(event)" class="max-w-xl mx-auto space-y-4">
+                            <div class="bg-paper-beige p-3 rounded-lg border border-paper-dark text-xs text-paper-dark font-medium flex items-center gap-2">
+                                <i class="fa-solid fa-lightbulb text-terracotta text-sm"></i>
+                                Ini adalah tampilan contoh formulir kumpul karya peserta.
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold font-heading uppercase mb-1">Nama Lengkap Peserta</label>
+                                <input type="text" required placeholder="Contoh: Amanda Putri" class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold font-heading uppercase mb-1">Email / Kontak Whatsapp</label>
+                                <input type="text" required placeholder="Contoh: amanda@gmail.com" class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold font-heading uppercase mb-1">Link Hasil Karya Canva</label>
+                                <input type="url" required placeholder="https://www.canva.com/design/..." class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold font-heading uppercase mb-1">Pesan / Kesan Workshop (Opsional)</label>
+                                <textarea rows="3" placeholder="Apa bagian favoritmu dari workshop hari ini?" class="w-full px-4 py-2.5 bg-white paper-border rounded-lg text-sm focus:outline-none"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-demo-btn" class="w-full py-3 bg-terracotta text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm hover:bg-terracotta-dark transition-all">
+                                Kirimkan Hasil Karya
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-paper-dark text-paper-bg py-8 px-4 md:px-8 mt-12 border-t-2 border-paper-dark">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div>
+                <p class="font-heading font-bold text-sm text-white">
+                    Canva Workshop & Presentation Hub
+                </p>
+                <p class="text-xs text-paper-bg/60 mt-0.5">
+                    1 Link Untuk Seluruh Keperluan Demo Workshop Canva.
+                </p>
+            </div>
+            <div class="flex items-center gap-4 text-xs text-paper-bg/80">
+                <a href="#materi" class="hover:text-terracotta transition-colors">Materi</a>
+                <span>•</span>
+                <a href="#templates" class="hover:text-terracotta transition-colors">Template</a>
+                <span>•</span>
+                <a href="#kumpul-karya" class="hover:text-terracotta transition-colors">Kumpul Karya</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE PREVIEW MODAL -->
+    <div id="preview-modal" class="fixed inset-0 bg-paper-dark/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-paper-card paper-border paper-shadow-lg rounded-2xl w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            
+            <!-- Modal Header -->
+            <div class="bg-paper-beige px-6 py-4 border-b-2 border-paper-dark flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-terracotta"></span>
+                    <h4 id="modal-title" class="font-heading font-bold text-base uppercase text-paper-dark">
+                        Detail Template Canva
+                    </h4>
+                </div>
+                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-paper-card paper-border flex items-center justify-center font-bold hover:bg-white transition-all text-sm">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 overflow-y-auto space-y-4">
+                <div class="aspect-video w-full bg-paper-bg rounded-xl paper-border overflow-hidden relative">
+                    <img id="modal-img" src="" alt="Preview" class="w-full h-full object-cover">
+                </div>
+
+                <div>
+                    <span id="modal-category" class="px-2.5 py-0.5 bg-terracotta text-white text-[10px] font-bold font-heading rounded-full uppercase">
+                        Category
+                    </span>
+                    <p id="modal-desc" class="text-sm text-paper-dark/80 mt-2 leading-relaxed">
+                        Deskripsi template...
+                    </p>
+                </div>
+
+                <div class="p-3 bg-paper-beige rounded-xl border border-paper-dark/30 text-xs text-paper-dark/80 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-terracotta text-sm"></i>
+                    <span>Klik <strong>"Gunakan Template Canva"</strong> untuk otomatis membuka dan menyalin file ini ke akun Canva milikmu.</span>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 bg-paper-bg border-t-2 border-paper-dark flex items-center justify-between gap-3">
+                <button onclick="copyModalLink()" class="px-4 py-2 bg-paper-card border border-paper-dark text-paper-dark font-heading font-bold text-xs uppercase rounded-lg hover:bg-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-copy"></i>
+                    <span>Salin Link</span>
+                </button>
+
+                <a id="modal-canva-btn" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-terracotta hover:bg-terracotta-dark text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm transition-all flex items-center gap-2">
+                    <span>Gunakan Template Canva</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 hidden">
+        <div class="bg-paper-dark text-white px-4 py-3 rounded-xl paper-border paper-shadow-sm flex items-center gap-3 text-xs font-bold font-heading animate-slide-up">
+            <i class="fa-solid fa-circle-check text-terracotta text-base"></i>
+            <span id="toast-message">Link berhasil disalin!</span>
+        </div>
+    </div>
+
+    <script>
+        /* 
+        ===================================================================
+        [EDIT DAFTAR TEMPLATE CANVA KAMU DI SINI]
+        Ganti nilai 'canvaUrl' di bawah ini dengan link Canva milikmu jika sudah siap!
+        ===================================================================
+        */
+        const templatesData = [
+            {
+                id: 1,
+                title: "Slide Deck Presentation Pitch",
+                category: "Presentation",
+                image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=600&q=80",
+                description: "Template slide presentasi 12 halaman bergaya minimalis dan elegan untuk keperluan pitch deck atau materi seminar.",
+                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+            },
+            {
+                id: 2,
+                title: "Instagram Aesthetic Carousel",
+                category: "Social Media",
+                image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+                description: "Template 5-slide carousel Instagram berformat grid berlanjut dengan tone warna earthy warm.",
+                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+            },
+            {
+                id: 3,
+                title: "Aesthetic Event Poster A4",
+                category: "Poster",
+                image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+                description: "Layout poster pameran atau event bertema vintage & tipografi cetak elegan.",
+                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+            },
+            {
+                id: 4,
+                title: "Brand Moodboard & Colors",
+                category: "Presentation",
+                image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80",
+                description: "Kombinasi kolase foto dan palet warna untuk mempresentasikan identitas visual sebuah brand.",
+                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+            },
+            {
+                id: 5,
+                title: "Editorial Header Banner",
+                category: "Social Media",
+                image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80",
+                description: "Banner header serbaguna bergaya majalah cetak modern untuk promosi produk atau konten edukasi.",
+                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+            },
+            {
+                id: 6,
+                title: "Minimalist Workshop Flyer",
+                category: "Poster",
+                image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80",
+                description: "Flyer promosi workshop ukuran A4 dengan kontras tinggi yang mudah dibaca oleh target audiens.",
+                canvaUrl: "https://www.canva.com" // <-- GANTI LINK CANVA DI SINI
+            }
+        ];
+
+        let activeCategory = 'all';
+        let currentActiveModalUrl = '';
+
+        window.onload = function() {
+            renderTemplates();
+        };
+
+        function renderTemplates() {
+            const grid = document.getElementById('template-grid');
+            grid.innerHTML = '';
+
+            const filtered = activeCategory === 'all' 
+                ? templatesData 
+                : templatesData.filter(t => t.category.toLowerCase() === activeCategory.toLowerCase());
+
+            filtered.forEach(item => {
+                grid.appendChild(createCardElement(item));
+            });
+        }
+
+        function createCardElement(item) {
+            const card = document.createElement('div');
+            card.className = "bg-paper-card rounded-2xl paper-border paper-shadow-hover overflow-hidden flex flex-col justify-between";
+
+            card.innerHTML = `
+                <div>
+                    <div class="aspect-video w-full bg-paper-beige relative overflow-hidden border-b-2 border-paper-dark">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover">
+                        <span class="absolute top-2.5 left-2.5 px-2.5 py-1 bg-paper-card paper-border rounded-md text-[10px] font-bold font-heading uppercase text-paper-dark paper-shadow-sm">
+                            ${item.category}
+                        </span>
+                    </div>
+
+                    <div class="p-5">
+                        <h4 class="font-heading font-bold text-base text-paper-dark leading-snug">
+                            ${item.title}
+                        </h4>
+                        <p class="text-xs text-paper-dark/70 mt-2 line-clamp-2 leading-relaxed">
+                            ${item.description}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-5 pt-0 flex items-center gap-2">
+                    <button onclick="openModal(${item.id})" class="px-3 py-2 bg-paper-beige hover:bg-white text-paper-dark font-heading font-bold text-xs uppercase rounded-lg border border-paper-dark transition-all">
+                        Preview
+                    </button>
+                    <a href="${item.canvaUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 bg-terracotta hover:bg-terracotta-dark text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg paper-border paper-shadow-sm transition-all text-center flex items-center justify-center gap-1.5">
+                        <span>Gunakan Template</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            `;
+            return card;
+        }
+
+        function filterCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                const btnText = btn.innerText.trim();
+                if ((cat === 'all' && btnText === 'Semua') || btnText.toLowerCase() === cat.toLowerCase()) {
+                    btn.className = "cat-btn active px-4 py-1.5 bg-paper-dark text-white text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all";
+                } else {
+                    btn.className = "cat-btn px-4 py-1.5 bg-paper-card hover:bg-paper-beige text-paper-dark text-xs font-bold font-heading rounded-lg border border-paper-dark whitespace-nowrap transition-all";
+                }
+            });
+            renderTemplates();
+        }
+
+        function openModal(id) {
+            const item = templatesData.find(t => t.id === id);
+            if (!item) return;
+
+            document.getElementById('modal-title').innerText = item.title;
+            document.getElementById('modal-img').src = item.image;
+            document.getElementById('modal-category').innerText = item.category;
+            document.getElementById('modal-desc').innerText = item.description;
+            document.getElementById('modal-canva-btn').href = item.canvaUrl;
+            
+            currentActiveModalUrl = item.canvaUrl;
+            document.getElementById('preview-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('preview-modal').classList.add('hidden');
+        }
+
+        function copyModalLink() {
+            if (!currentActiveModalUrl) return;
+            
+            const dummyInput = document.createElement('input');
+            document.body.appendChild(dummyInput);
+            dummyInput.value = currentActiveModalUrl;
+            dummyInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummyInput);
+
+            showToast("Link Template Canva Berhasil Disalin!");
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        function hidePlaceholderNotice() {
+            document.getElementById('form-placeholder-notice').classList.add('hidden');
+            document.getElementById('form-iframe').classList.add('hidden');
+            document.getElementById('demo-direct-form').classList.remove('hidden');
+        }
+
+        function handleDemoSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-demo-btn');
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Mengirim...`;
+            
+            setTimeout(() => {
+                btn.innerHTML = `<i class="fa-solid fa-check-circle"></i> Hasil Karya Terkirim!`;
+                btn.classList.remove('bg-terracotta');
+                btn.classList.add('bg-emerald-700');
+
+                showToast("Terima kasih! Hasil karya kamu telah terkirim.");
+
+                setTimeout(() => {
+                    e.target.reset();
+                    btn.innerHTML = `Kirimkan Hasil Karya`;
+                    btn.classList.remove('bg-emerald-700');
+                    btn.classList.add('bg-terracotta');
+                }, 3000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
